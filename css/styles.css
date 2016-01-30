@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    border-bottom: 1px solid rgb(39, 47, 50);
+    height: 80px;
+}
+
+a {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: rgb(46, 204, 113);
+}
+a:hover {
+    color: rgb(39, 174, 96);
+    text-decoration: none;
+}
+
+img#logo {
+    width:120px;
+}
+
+header {
+    padding: 20px 0px 20px 0px;
+    background-color:
+}
+
+#bannerImg {
+    width: 500px;
+}
+
+form#headerForm {
+    margin-top: 30px;
+}
+
+input {
+    height:30px;
+}
+
+section {
+    padding: 70px 0px 70px 0px;
+}
+
+p {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    color: rgb(39, 47, 50);
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 54px;
+    padding-bottom: 20px;
+}
+
+h4 {
+    text-transform: uppercase;
+    color: rgb(46, 204, 113);
+    margin-bottom: 20px;
+}
+
+.headerCta {
+    margin-top: 20px;
+}
+
+p.lead {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 30px;
+}
+
+.bgSecondary {
+    background-color: rgb(244, 245, 250);
+}
+
+.bgPrimary {
+    background-color: rgb(255, 255, 255);
+}
+
+.verticalAlign {
+    display: flex;
+    align-items: center;
+}
+
+.btn-success {
+    background-color: rgb(46, 204, 113);
+    padding: 15px 30px;
+    font-size: 18px;
+}
+.btn-success:hover {
+    background-color: rgb(39, 174, 96);
+}
