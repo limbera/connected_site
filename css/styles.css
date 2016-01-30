@@ -87,11 +87,18 @@ p.lead {
     align-items: center;
 }
 
-.btn-success {
-    background-color: rgb(46, 204, 113);
+.btn {
     padding: 15px 30px;
     font-size: 18px;
 }
+.btn-success {
+    background-color: rgb(46, 204, 113);
+}
 .btn-success:hover {
     background-color: rgb(39, 174, 96);
+}
+
+
+.modal-body > p {
+    margin: 10px 0px 20px 0px;
 }

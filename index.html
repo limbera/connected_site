@@ -39,7 +39,7 @@
           medical, nursing and allied health students miss out on each and
           every day. Starting with your clinical practice!
         </p>
-        <a href="" class="btn btn-success headerCta">Request Demo</a>
+        <a href="" class="btn btn-success headerCta" data-toggle="modal" data-target="#demoModal">Request Demo</a>
       </div>
       <div class="col-md-6">
         <img id="bannerImg" src="img/banner.gif">
@@ -130,16 +130,65 @@
     <div class="container text-center">
       <div class="col-md-12">
         <p class="lead">Creating moments to teach and learn.</p>
-        <button type="submit" class="btn btn-success">Request Demo</button>
+        <a href="" class="btn btn-success headerCta" data-toggle="modal" data-target="#demoModal">Request Demo</a>
       </div>
     </div>
   </section>
 
   <section class="bgPrimary">
     <div class="container">
-      <p class=""><small>© 2016 On Beyond Zebra Pty. Ltd.</small></p>
+      <div class="col-md-6">
+        <p>© 2016 On Beyond Zebra Pty. Ltd.</p>
+      </div>
+      <div class="col-md-6">
+        <ul class="pull-right list-inline">
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Privacy</a></li>
+        </ul>
+      </div>
     </div>
   </section>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Demo Registration</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            Leave us your contact details and we'll be in touch to organise a demo.
+          </p>
+          <form class="form">
+            <div class="form-group">
+              <label class="sr-only" for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="phone">Phone Number</label>
+              <input type="phone" class="form-control" id="phone" placeholder="Phone">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="institution">Institution</label>
+              <input type="text" class="form-control" id="institution" placeholder="Institution">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Register</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- Modal -->
 
   <script src="js/jquery-1.12.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
