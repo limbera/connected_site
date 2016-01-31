@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="css/styles.css">
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -26,15 +29,15 @@
       <div class="col-md-3">
         <img id="logo" src="img/flat_logo.png">
       </div>
-      <div class="col-md-9 text-right">
+      <div class="col-md-9 text-right hidden-sm hidden-xs">
         <a href="" id="whatHeadLink">What is ConnectEd?</a>
       </div>
     </div>
   </nav>
 
-  <header class="bgPrimary">
+  <header class="bgPrimary herotron">
     <div class="container verticalAlign">
-      <div class="col-md-6">
+      <div class="col-md-6 col-sm-12">
         <h1>We connect educators and learners in real-time.</h1>
         <p>
           Our mission is to uncover the many learning opportunities that
@@ -43,8 +46,8 @@
         </p>
         <a href="" class="btn btn-success headerCta" data-toggle="modal" data-target="#demoModal">View Live Demo</a>
       </div>
-      <div class="col-md-6">
-        <img id="bannerImg" src="img/banner.gif">
+      <div class="col-md-6 hidden-sm hidden-xs">
+        <img id="banner" src="img/banner.gif">
       </div>
     </div>
   </header>
@@ -64,8 +67,9 @@
       </div>
     </div>
 
-    <div class="screenshots">
-      <div class="container">
+    <!-- Only visible on md and lg -->
+    <div id="screenshotsDesktop" class="visible-md visible-lg">
+      <div class="container text-center">
         <div class="col-md-3">
           <img class="screenshot" src="img/screenshot_1.png">
         </div>
@@ -78,9 +82,7 @@
         <div class="col-md-3">
           <img class="screenshot" src="img/screenshot_3.png">
         </div>
-      </div>
 
-      <div class="container text-center">
         <div class="col-md-3">
           <p>
             Step 1<br>
@@ -106,11 +108,53 @@
           </p>
         </div>
       </div>
+    </div><!-- Only visible on md and lg -->
+
+    <!-- Only visible on sm and xs -->
+    <div id="screenshotsMobile" class="visible-xs visible-sm">
+      <div class="container text-center">
+        <div class="col-sm-12 col-md-3">
+          <img class="screenshot" src="img/screenshot_1.png">
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <p>
+            Step 1<br>
+            Create Opportunity
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <img class="screenshot" src="img/screenshot_4.png">
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <p>
+            Step 2<br>
+            Students Notified
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <img class="screenshot" src="img/screenshot_2.png">
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <p>
+            Step 3<br>
+            Feed Updated
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <img class="screenshot" src="img/screenshot_3.png">
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <p>
+            Step 4<br>
+            Place Reserved
+          </p>
+        </div>
+      </div>
     </div>
+  </section><!-- Only visible on sm and xs -->
 
-  </section>
 
-  <section class="bgPrimary">
+  <section class="bgPrimary users">
     <div class="container">
       <div class="col-md-6">
         <h4>ConnectEd for Educators</h4>
@@ -130,12 +174,9 @@
     </div>
   </section>
 
-  <section class="bgPrimary">
+  <section class="bgPrimary users">
     <div class="container">
-      <div class="col-md-6">
-        <img src="img/connected_for_learners.png">
-      </div>
-      <div class="col-md-6">
+      <div class="col-sm-12 col-md-6 col-md-push-6">
         <h4>ConnectEd for Learners</h4>
         <p class="lead">
           Subscribe to tags or specific educators and get notified.
@@ -147,13 +188,16 @@
         </p>
         <!-- <a href="">Learn more...</a> -->
       </div>
+      <div class="col-sm-12 col-md-6 col-md-pull-6">
+        <img src="img/connected_for_learners.png">
+      </div>
     </div>
   </section>
 
-  <section class="bgPrimary">
+  <section class="bgPrimary users">
     <div class="container">
       <div class="col-md-6">
-        <h4>ConnectEd for Administrators</h4>
+        <h4>ConnectEd for Managers</h4>
         <p class="lead">
           Live updating reports, see where opportunities
           are happening.
@@ -182,13 +226,11 @@
 
   <section class="bgPrimary">
     <div class="container">
-      <div class="col-md-6">
-        <p>© 2016 On Beyond Zebra Pty. Ltd.</p>
+      <div class="col-xs-9">
+        <p><small>© 2016 On Beyond Zebra</small></p>
       </div>
-      <div class="col-md-6">
-        <ul class="pull-right list-inline">
-          <li><a href="mailto:info@connectedteamapp.com">Contact</a></li>
-        </ul>
+      <div class="col-xs-3 text-right">
+        <a href="mailto:info@connectedteamapp.com">Contact</a>
       </div>
     </div>
   </section>
@@ -200,11 +242,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Live Demo</h4>
+          <h4 class="modal-title">Live Demo</h4>
         </div>
         <div class="modal-body">
           <p>
-            Leave your contact details in the form below to get <mark>INSTANT ACCESS</mark> to our live demo.
+             Leave your details for <mark>INSTANT ACCESS</mark> to our live demo.
           </p>
           <form class="form">
             <div class="form-group">
@@ -227,7 +269,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success">Register</button>
+          <button type="button" class="btn btn-success">View Demo</button>
         </div>
       </div>
     </div>

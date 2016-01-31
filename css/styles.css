@@ -1,14 +1,45 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
+
+/* ----------- Page elements ----------- */
 body {
     font-family: 'Open Sans', sans-serif;
 }
-
 nav {
-    border-bottom: 1px solid rgb(39, 47, 50);
     height: 120px;
+    border-bottom: 1px solid rgb(39, 47, 50);
+}
+header {
+    padding: 20px 0px;
+}
+section {
+    padding: 70px 0px;
 }
 
+/* ----------- Typography ----------- */
+h1 {
+    font-size: 46px;
+    line-height: 54px;
+    margin-bottom: 20px;
+}
+h4 {
+    text-transform: uppercase;
+    color: rgb(46, 204, 113);
+    margin-bottom: 20px;
+}
+p.lead {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 38px;
+    margin-bottom: 30px;
+}
+p {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    color: rgb(39, 47, 50);
+    margin-bottom: 20px;
+}
 a {
     font-size: 16px;
     letter-spacing: 0.5px;
@@ -19,87 +50,26 @@ a:hover {
     text-decoration: none;
 }
 
+/* ----------- Images ----------- */
 img#logo {
     width:200px;
 }
-
-img.screenshot {
-    width: 250px;
-    padding:0;
-    margin:0;
-}
-
-.screenshots {
-    margin-top: 40px;
-}
-
-header {
-    padding: 20px 0px 20px 0px;
-    background-color:
-}
-
-#bannerImg {
+img#banner {
     width: 500px;
 }
-
-form#headerForm {
-    margin-top: 30px;
+img.screenshot {
+    width: 250px;
 }
 
+/* ----------- Forms ----------- */
 input {
-    height:30px;
+    height:30px; /* Must match button height */
 }
 
-section {
-    padding: 70px 0px 70px 0px;
-}
-
-p {
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    line-height: 28px;
-    color: rgb(39, 47, 50);
-}
-
-h1 {
-    font-size: 46px;
-    line-height: 54px;
-    padding-bottom: 20px;
-}
-
-h4 {
-    text-transform: uppercase;
-    color: rgb(46, 204, 113);
-    margin-bottom: 20px;
-}
-
-.headerCta {
-    margin-top: 20px;
-}
-
-p.lead {
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 38px;
-    margin-bottom: 30px;
-}
-
-.bgSecondary {
-    background-color: rgb(244, 245, 250);
-}
-
-.bgPrimary {
-    background-color: rgb(255, 255, 255);
-}
-
-.verticalAlign {
-    display: flex;
-    align-items: center;
-}
-
+/* ----------- Buttons ----------- */
 .btn {
-    padding: 15px 30px;
     font-size: 18px;
+    padding: 15px 30px;
 }
 .btn-success {
     background-color: rgb(46, 204, 113);
@@ -108,8 +78,58 @@ p.lead {
     background-color: rgb(39, 174, 96);
 }
 
+/* ----------- Helper Classes ----------- */
+.verticalAlign {
+    display: flex;
+    align-items: center;
+}
+.bgSecondary {
+    background-color: rgb(244, 245, 250);
+}
+.bgPrimary {
+    background-color: rgb(255, 255, 255);
+}
 
-.modal-body > p {
-    margin: 10px 0px 20px 0px;
+/* ----------- Media Queries ----------- */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+
+    nav {
+        height: 80px;
+    }
+    header {
+        margin-bottom: 40px;
+    }
+    img#logo {
+        width: 150px;
+    }
+    img.screenshot {
+        width: 280px;
+    }
+    .users img {
+        width: 280px;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    .herotron {
+        height: 500px;
+        padding-top: 90px;
+    }
 }
 
