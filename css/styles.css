@@ -71,19 +71,13 @@ input {
     font-size: 18px;
     padding: 15px 30px;
 }
-.btn-success {
+.btn-success,
+.btn-success:focus,
+.btn-success:active {
     background-color: #fe512e !important;
     border-color: #f6861d !important;
 }
 .btn-success:hover {
-    background-color: #f6861d !important;
-    border-color: #fe512e !important;
-}
-.btn-success:focus {
-    background-color: #f6861d !important;
-    border-color: #fe512e !important;
-}
-.btn-success:active {
     background-color: #f6861d !important;
     border-color: #fe512e !important;
 }
