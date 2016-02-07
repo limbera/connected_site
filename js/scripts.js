@@ -8,60 +8,29 @@ $('#whatHeadLink').on('click', function(event) {
     }
 });
 
-// Variable to hold request
-var request;
+function postContactToGoogle() {
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var phone = $('#phone').val();
+    var institution = $('#institution').val();
 
-// Bind to the submit event of our form
-$("#demoForm").submit(function(event){
-
-    // Abort any pending request
-    if (request) {
-        request.abort();
-    }
-    // setup some local variables
-    var $form = $(this);
-
-    // Let's select and cache all the fields
-    var $inputs = $form.find("input, select, button, textarea");
-
-    // Serialize the data in the form
-    var serializedData = $form.serialize();
-
-
-    // Let's disable the inputs for the duration of the Ajax request.
-    // Note: we disable elements AFTER the form data has been serialized.
-    // Disabled form elements will not be serialized.
-    $inputs.prop("disabled", true);
-
-    // fire off the request to Google Sheets
-    request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbz6z_GUHtRsFViKePupclc9BNAV5y6qI6buBXVR59wxvJxnd_Y/exec",
-        type: "post",
-        data: serializedData
+    $.ajax({
+        url: "https://docs.google.com/forms/d/1r45N3CRJNUxwW5pmzUzX3I4bA04eOq7RXGSvpZ_mRbY/formResponse",
+        data: {
+            "entry_1216290066": name,
+            "entry_1589502254": email,
+            "entry_1876550738": phone,
+            "entry_546673556": institution
+        },
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+            0: function () {
+                window.location.replace("ThankYou.html");
+            },
+            200: function () {
+                window.location.replace("ThankYou.html");
+            }
+        }
     });
-
-    // Callback handler that will be called on success
-    request.done(function (response, textStatus, jqXHR){
-        // Log a message to the console
-        console.log("Hooray, it worked!");
-    });
-
-    // Callback handler that will be called on failure
-    request.fail(function (jqXHR, textStatus, errorThrown){
-        // Log the error to the console
-        console.error(
-            "The following error occurred: "+
-            textStatus, errorThrown
-        );
-    });
-
-    // Callback handler that will be called regardless
-    // if the request failed or succeeded
-    request.always(function () {
-        // Reenable the inputs
-        $inputs.prop("disabled", false);
-    });
-
-    // Prevent default posting of form
-    event.preventDefault();
-});
+}
