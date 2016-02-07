@@ -244,33 +244,33 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title">Live Demo</h4>
         </div>
-        <div class="modal-body">
-          <p>
-             Leave your details for <mark>INSTANT ACCESS</mark> to our live demo.
-          </p>
-          <form class="form">
+        <form id="demoForm" class="form">
+          <div class="modal-body">
+            <p>
+               Leave your details here to be contacted for a live demo.
+            </p>
             <div class="form-group">
               <label class="sr-only" for="name">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Name">
+              <input type="text" class="form-control" name="name" id="name" placeholder="Name">
             </div>
             <div class="form-group">
               <label class="sr-only" for="phone">Phone Number</label>
-              <input type="phone" class="form-control" id="phone" placeholder="Phone">
+              <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone">
             </div>
             <div class="form-group">
               <label class="sr-only" for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email">
             </div>
             <div class="form-group">
               <label class="sr-only" for="institution">Institution</label>
-              <input type="text" class="form-control" id="institution" placeholder="Institution">
+              <input type="text" class="form-control" name="institution" id="institution" placeholder="Institution">
             </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success">View Demo</button>
-        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success">View Demo</button>
+          </div>
+        </form>
       </div>
     </div>
   </div><!-- Modal -->
