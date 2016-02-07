@@ -75,8 +75,14 @@ input {
     background-color: #fe512e;
     border-color: #f6861d;
 }
-.btn-success:hover,
-.btn-success:focus,
+.btn-success:hover {
+    background-color: #f6861d;
+    border-color: #fe512e;
+}
+.btn-success:focus {
+    background-color: #f6861d;
+    border-color: #fe512e;
+}
 .btn-success:active {
     background-color: #f6861d;
     border-color: #fe512e;
